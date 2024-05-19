@@ -28,3 +28,7 @@ The goal of this project is to develop a robust sentiment analysis service that 
    git clone https://github.com/your-github-username/sentiment-analysis-service.git
    cd sentiment-analysis-service
 
+## Install Dependencies
+
+```bash
+pip install -r requirements.txt
