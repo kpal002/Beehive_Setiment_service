@@ -164,9 +164,9 @@ The tweets.py script is designed to analyze tweets using the sentiment analysis 
 
 - numeric_sentiment: This field provides a numeric representation of the sentiment where the range typically is between -1 and 1. A value of 0.0 in this context confirms that the sentiment is neutral. The range generally interprets as:
 
--1: Strongly negative
-0: Neutral
-1: Strongly positive
+- -1: Strongly negative
+- 0: Neutral
+- 1: Strongly positive
 
 This numeric scale helps in quantifying sentiment in a way that can be easily aggregated or compared across different texts or data points.
 
