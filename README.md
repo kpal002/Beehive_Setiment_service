@@ -132,3 +132,18 @@ curl -X POST http://127.0.0.1:5000/sentiment \
 - **Authentication Best Practices**: There should be a secure method for authenticating users, such as verifying credentials against a database or using an OAuth provider.
 
 These updates ensure users understand the importance of proper authentication practices and encourage them to implement secure methods in their deployments. This approach not only protects the application but also educates users on maintaining the security and integrity of their interactions with the service.
+
+## Testing
+
+### Unit Tests
+
+Unit tests for the application are located in the `unit_tests.py` file. These tests cover critical components of the application, ensuring that both the external API and the fallback local model function correctly under various scenarios. To run these tests, use the following command:
+
+```bash
+python -m unittest unit_test
+```
+
+## Script for Analyzing Tweets
+
+The tweets.py script is designed to analyze tweets using the sentiment analysis service. It processes tweets from the Twitter US Airline Sentiment dataset and sends them to the /sentiment endpoint. This script is useful for batch processing or testing the service with real data. The dataset can be found inside the Data Folder.
+
