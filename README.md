@@ -147,3 +147,27 @@ python -m unittest unit_test
 
 The tweets.py script is designed to analyze tweets using the sentiment analysis service. It processes tweets from the Twitter US Airline Sentiment dataset and sends them to the /sentiment endpoint. This script is useful for batch processing or testing the service with real data. The dataset can be found inside the Data Folder.
 
+## Output 
+```
+{
+  "sentiment": {
+    "label": "neutral",
+    "numeric_sentiment": 0.0,
+    "score": 0.8863000273704529
+  }
+}
+```
+
+**Fields:**
+
+- label: This field indicates the categorical sentiment classification based on the analyzed text. In this case, the label is "neutral", which suggests that the sentiment expressed in the text does not have a strongly positive or negative emotional charge. Other possible values might include "positive" or "negative" depending on the sentiment analysis model's capabilities and configuration.
+
+- numeric_sentiment: This field provides a numeric representation of the sentiment where the range typically is between -1 and 1. A value of 0.0 in this context confirms that the sentiment is neutral. The range generally interprets as:
+
+-1: Strongly negative
+0: Neutral
+1: Strongly positive
+
+This numeric scale helps in quantifying sentiment in a way that can be easily aggregated or compared across different texts or data points.
+
+- score: This value, which is 0.8863000273704529 in the output, represents the confidence score of the sentiment analysis model regarding the assigned label. The score is a floating-point number between 0 and 1, where a higher score indicates greater confidence in the sentiment classification. In this case, a score of approximately 0.886 suggests that the model is quite confident in its classification of the sentiment as neutral.
