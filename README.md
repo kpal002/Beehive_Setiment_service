@@ -97,4 +97,31 @@ require('crypto').randomBytes(32, function(err, buffer) {
 });
 ```
 
+## Run the application
+
+```bash
+python app.py
+```
+
+## Authentication
+
+Before sending requests to the `/sentiment` endpoint, you need to authenticate and obtain a JWT token. Here is how you can log in to retrieve the token:
+
+```bash
+curl -X POST http://127.0.0.1:5000/login \
+     -H 'Content-Type: application/json' \
+     -d '{"username": "admin", "password": "secret"}'
+```
+
+This will return a JWT token which you should include in the Authorization header of subsequent requests.
+
+## Sending a Request
+Once authenticated, you can send a POST request to the /sentiment endpoint with a JSON payload containing the text to analyze. Use the JWT token received from the login step in the Authorization header:
+
+```bash
+curl -X POST http://127.0.0.1:5000/sentiment \
+     -H 'Authorization: Bearer YourJWTTokenHere' \
+     -H 'Content-Type: application/json' \
+     -d '{"text": "I love flying!"}'
+```
 
