@@ -38,10 +38,11 @@ pip install -r requirements.txt
 
 Create a .env file in the project root and add the following variables:
 
+```
 HF_TOKEN=your_huggingface_api_token
 HF_MODEL=optional_model_identifier
 JWT_SECRET_KEY=your_jwt_secret_key
-
+```
 
 ## What is a JWT Secret Key?
 A JWT (JSON Web Token) secret key is a crucial component used to sign and verify the tokens to ensure their integrity and security. JSON Web Tokens are an open standard used primarily for securely transmitting information between parties as a compact JSON object. This information can be verified and trusted because it is digitally signed using a secret key or a public/private key pair.
@@ -63,5 +64,35 @@ The security of your JWT implementation depends significantly on the secret key.
 - Unique: Preferably different for each environment or application.
 
 Here are some methods to generate a secure JWT secret key:
+
+- Using a Command Line Tool
+
+1. On Linux or macOS, you can use:
+```bash
+openssl rand -base64 32
+```
+
+2. On Windows, using PowerShell:
+powershell
+```
+[System.Convert]::ToBase64String([System.Security.Cryptography.RandomNumberGenerator]::Create().GetBytes(32))
+```
+
+Using a Programming Language
+
+Python example:
+python
+Copy code
+import os
+import base64
+secret_key = base64.urlsafe_b64encode(os.urandom(32))
+print(secret_key.decode())
+Node.js example:
+javascript
+Copy code
+require('crypto').randomBytes(32, function(err, buffer) {
+  var token = buffer.toString('base64');
+  console.log(token);
+});
 
 
