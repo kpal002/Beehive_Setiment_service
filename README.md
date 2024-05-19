@@ -73,26 +73,28 @@ openssl rand -base64 32
 ```
 
 2. On Windows, using PowerShell:
-powershell
 ```
 [System.Convert]::ToBase64String([System.Security.Cryptography.RandomNumberGenerator]::Create().GetBytes(32))
 ```
 
-Using a Programming Language
+3. Using a Programming Language
 
 Python example:
-python
-Copy code
+
+```bash
 import os
 import base64
 secret_key = base64.urlsafe_b64encode(os.urandom(32))
 print(secret_key.decode())
+```
+
 Node.js example:
-javascript
-Copy code
+
+```bash
 require('crypto').randomBytes(32, function(err, buffer) {
   var token = buffer.toString('base64');
   console.log(token);
 });
+```
 
 
