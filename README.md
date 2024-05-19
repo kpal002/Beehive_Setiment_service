@@ -32,3 +32,36 @@ The goal of this project is to develop a robust sentiment analysis service that 
 
 ```bash
 pip install -r requirements.txt
+```
+
+## Environment Variables
+
+Create a .env file in the project root and add the following variables:
+
+HF_TOKEN=your_huggingface_api_token
+HF_MODEL=optional_model_identifier
+JWT_SECRET_KEY=your_jwt_secret_key
+
+
+## What is a JWT Secret Key?
+A JWT (JSON Web Token) secret key is a crucial component used to sign and verify the tokens to ensure their integrity and security. JSON Web Tokens are an open standard used primarily for securely transmitting information between parties as a compact JSON object. This information can be verified and trusted because it is digitally signed using a secret key or a public/private key pair.
+
+Purpose of the JWT Secret Key
+The JWT secret key is used in the signing process to create the signature part of the JWT. The signature ensures that the token hasn’t been altered after it was issued and is also used to verify that the sender of the JWT is who it says it is and to ensure that the message wasn't changed along the way.
+
+Here’s how it works:
+
+- Signing: When a JWT is created, its header, payload, and secret key are taken, and an algorithm (specified in the header) is applied to produce a unique signature. If the JWT includes sensitive information, it can also be encrypted.
+
+-Verification: When a JWT is received, the signature is verified using the secret key. If the signature is valid, it confirms the token’s integrity, that the sender of the JWT possesses the secret key, and that the token was not tampered with.
+
+### How to Generate a JWT Secret Key
+The security of your JWT implementation depends significantly on the secret key. It should be:
+
+- Sufficiently Random: Unpredictable and not easily guessable.
+- Secret: Only accessible to parties responsible for issuing and validating tokens.
+- Unique: Preferably different for each environment or application.
+
+Here are some methods to generate a secure JWT secret key:
+
+
