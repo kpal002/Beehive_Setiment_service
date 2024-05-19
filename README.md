@@ -125,3 +125,10 @@ curl -X POST http://127.0.0.1:5000/sentiment \
      -d '{"text": "I love flying!"}'
 ```
 
+
+### Key Points to Include:
+
+- **Security Warning**: The credentials used in the examples are for testing and demonstration purposes and should not be used in a production environment.
+- **Authentication Best Practices**: There should be a secure method for authenticating users, such as verifying credentials against a database or using an OAuth provider.
+
+These updates ensure users understand the importance of proper authentication practices and encourage them to implement secure methods in their deployments. This approach not only protects the application but also educates users on maintaining the security and integrity of their interactions with the service.
