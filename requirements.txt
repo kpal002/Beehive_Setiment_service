@@ -1,0 +1,8 @@
+flask
+transformers
+torch
+requests
+python-dotenv
+Flask-JWT-Extended
+scikit-learn
+
