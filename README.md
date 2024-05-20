@@ -171,3 +171,29 @@ The tweets.py script is designed to analyze tweets using the sentiment analysis 
 This numeric scale helps in quantifying sentiment in a way that can be easily aggregated or compared across different texts or data points.
 
 - score: This value, which is 0.8863000273704529 in the output, represents the confidence score of the sentiment analysis model regarding the assigned label. The score is a floating-point number between 0 and 1, where a higher score indicates greater confidence in the sentiment classification. In this case, a score of approximately 0.886 suggests that the model is quite confident in its classification of the sentiment as neutral.
+
+## Bonus Features
+
+- Suggest/Implement ways to provide confidence level of the results: Already the output includes confidence scores for each prediction.
+- Suggest/Implement ways to validate the results: tweets.py already includes validating the model output (either through API or local model) with actual labels for the Twitter US Airline Sentiment dataset. Here is the classification report for the first 3000 tweets.
+
+```
+Classification Report:
+               precision    recall  f1-score   support
+
+    Negative       0.92      0.84      0.88      1949
+     Neutral       0.58      0.63      0.60       596
+    Positive       0.71      0.88      0.79       455
+
+    accuracy                           0.81      3000
+   macro avg       0.74      0.78      0.76      3000
+weighted avg       0.82      0.81      0.81      3000
+```
+- Suggest/Implement ways to improve and implement learning processes
+
+To enhance the effectiveness of pre-trained models in sentiment analysis services without extensive retraining, several strategies can be employed:
+
+- Fine-Tuning: The pre-trained model can be adjusted on a relevant subset of data to better align with specific needs.
+- Model Wrapping: The pre-trained model can be incorporated into a larger system with additional processing layers to refine its outputs.
+- Adaptive Use: Interpretation and application of the model’s outputs can be modified, such as adjusting confidence thresholds.
+- Continuous Monitoring: The model’s performance can be regularly evaluated, and user feedback can be integrated to guide any future improvements.
