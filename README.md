@@ -25,8 +25,8 @@ The goal of this project is to develop a robust sentiment analysis service that 
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/your-github-username/sentiment-analysis-service.git
-   cd sentiment-analysis-service
+   git clone https://github.com/your-github-username/Beehive_Setiment_service.git
+   cd Beehive_Setiment_service
 
 ## Install Dependencies
 
